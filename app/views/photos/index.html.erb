@@ -1,0 +1,17 @@
+<h1>Disaster</h1>
+
+<ul>
+ <% @photos.each do |photo| %>
+  <li>
+  	<%= photo.created_at %>
+    <%= photo.title %>
+    <%= link_to 'Show', photo_path(photo) %>
+    <%= link_to 'Edit', edit_photo_path(photo) %>
+    <%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %>
+  </li>
+ <% end %>
+</ul>
+
+<%= link_to 'New Photo', new_photo_path %>
+
+<%= paginate @photos %>

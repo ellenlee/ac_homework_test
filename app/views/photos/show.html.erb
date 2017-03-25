@@ -1,0 +1,10 @@
+
+<%= @photo.title %>
+
+<%= @photo.created_at %>
+
+<p>Category: <%= @photo.category.name %></p>
+
+<%= simple_format(@photo.description) %>
+
+<p><%= link_to 'Back to index', photos_path %></p>
