@@ -4,8 +4,7 @@
  <% @photos.each do |photo| %>
   <li>
   	<%= photo.created_at %>
-    <%= photo.title %>
-    <%= link_to 'Show', photo_path(photo) %>
+    <%= link_to photo.title, photo_path(photo) %>
     <%= link_to 'Edit', edit_photo_path(photo) %>
     <%= link_to 'Destroy', photo_path(photo), method: :delete, data:{ confirm: "Are you sure?" } %>
   </li>
