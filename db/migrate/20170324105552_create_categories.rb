@@ -7,8 +7,8 @@ class CreateCategories < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_column :photos, :cateogry_id, :integer
-    add_index :photos, :cateogry_id
+    add_column :photos, :category_id, :integer
+    add_index :photos, :category_id
 
   end
 end

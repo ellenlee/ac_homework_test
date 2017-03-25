@@ -1,10 +1,20 @@
 
-<%= @photo.title %>
+<h1><%= @photo.title %></h1>
 
 <%= @photo.created_at %>
 
 <p>Category: <%= @photo.category.name %></p>
 
 <%= simple_format(@photo.description) %>
+
+<h2>留言</h2>
+
+<% @replys.each do |reply| %>
+
+	<%= reply.content %>
+
+<% end %>
+
+<p><%= link_to "回覆", new_photo_reply_path(@photo) %></p>
 
 <p><%= link_to 'Back to index', photos_path %></p>

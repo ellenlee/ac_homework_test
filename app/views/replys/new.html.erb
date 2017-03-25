@@ -1,0 +1,8 @@
+<%= form_for @reply, :url => photo_replys_path do |f| %>
+
+  <%= f.label :content, "留言" %>
+  <%= f.text_field :content %>
+
+  <%= f.submit "回覆" %>
+
+ <% end %>
