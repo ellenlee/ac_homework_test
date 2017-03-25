@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
 
+	before_action :authenticate_user, only:[ :new]
 	before_action :set_params, only:[ :show, :edit, :update, :destroy]
 
   def index
@@ -8,6 +9,7 @@ class PhotosController < ApplicationController
 	end
 
 	def new
+		# authenticate_user!
 		@photo = Photo.new
 	end
 

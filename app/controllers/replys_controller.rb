@@ -5,7 +5,7 @@ class ReplysController < ApplicationController
 	end
 
 	def create
-		@reply = Reply.new(reply_params)
+		@reply = current_user.replys.new(reply_params)
 		@reply.photo_id = params[:photo_id]
 		@reply.save
 
